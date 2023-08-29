@@ -11,6 +11,10 @@ body {
     margin-top: 10%;
 }
 
+.privacy-container {
+    margin-top: 2%;
+}
+
 .urlContent {
     display: flex;
     flex-direction: column;
@@ -20,6 +24,15 @@ body {
     text-align: center;
     border-radius: 20px;
     padding: 20px 20px 40px;
+}
+
+.privacy-content {
+    /* max-width: 360px; */
+    background-color: #fff;
+    color: #343434;
+    text-align: left;
+    /* border-radius: 20px; */
+    padding: 30px 30px 40px;
 }
 
 img {
