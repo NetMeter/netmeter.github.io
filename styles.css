@@ -78,6 +78,23 @@ p {
     box-shadow: 0px 6px 18px -5px rgb(199, 199, 199);
 }
 
+.info-release {
+    padding: 0.3em 0;
+    margin: 10px 0;
+    display: prince-footnote;
+    font-size: 0.8888888889rem;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    color: #4d4d4d;
+    line-height: 1.5555555556em;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    counter-increment: footnote;
+}
+
 .footnote {
     border-top: 1px solid #aaa;
     border-clip: 3in;
@@ -96,4 +113,14 @@ p {
     text-transform: none;
     counter-increment: footnote;
     footnote-style-position: outside;
+}
+
+.footnote a {
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000000;
 }
