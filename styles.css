@@ -109,6 +109,7 @@ img {
 .privacy-content, .release-notes-content, .faq-content {
     color: var(--text-color);
     line-height: 1.6;
+    padding-top: 1rem;
 }
 
 h1, h2, h3 {
