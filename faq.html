@@ -22,18 +22,23 @@
             <h3><strong>FAQ:</strong> Our Ongoing Efforts to Enhance Extension Accuracy and Website Support</h3>
 
             <p>
-                <strong>Q:</strong> How do you measure bandwidth usage for supported websites?<br>
-                <strong>A:</strong> We measure bandwidth usage by examining multiple factors, including the
-                "Content-Length" header in the response of each request made by the extension. This header provides
-                information about the size of the content being downloaded. Additionally, we take into account the
-                request payloads sent by users, which may include data submitted through forms or other interactions on
-                websites. This comprehensive approach ensures that we provide an accurate measurement of both the
-                content received and sent during your browsing sessions.
+                <strong>Q:</strong> How do you measure bandwidth usage?<br>
+                <strong>A:</strong> We use several lightweight signals to estimate your data usage. 
+                Along with reading the Content-Length header, we apply carefully controlled patches to APIs like
+                fetch, XHR, WebRTC, WebSocket, SSE, Beacon, native video/audio, and certain workers.
+                These patches run quietly inside the page context and never alter how the site behaves.
+                By combining all these sources, we provide accurate inbound and outbound bandwidth estimates
+                without affecting your browsing experience.
                 <br>
                 It's important to note that while we measure request payloads for bandwidth usage, we do not log or
                 store any of the data contained in these payloads. Your privacy and data security are of utmost
                 importance to us, and we do not collect or retain any sensitive information from your browsing
                 activities.
+            </p>
+
+            <p>
+                <strong>Q:</strong> Do these patches affect website performance or user experience?<br>
+                <strong>A:</strong> No. The instrumentation is minimal, non-intrusive, and designed to leave the website’s functionality completely unchanged. Everything continues to work as usual—you simply get clearer insight into your bandwidth usage.
             </p>
 
             <p>
