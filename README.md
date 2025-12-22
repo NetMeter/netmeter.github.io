@@ -35,7 +35,7 @@ A powerful tool to analyze, monitor, and clean site-specific data. Take control 
 ---
 
 ## 🛠 Built With
-- **TypeScript** & **Preact**: For high performance and tiny footprint.
+- **TypeScript**: For high performance and reliable code.
 - **esbuild**: For lightning-fast builds.
 - **Privacy-First Architecture**: All processing happens locally on your device.
 
