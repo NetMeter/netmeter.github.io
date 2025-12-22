@@ -1,37 +1,44 @@
-# NetMeter Web Extension
+# NetMeter Extensions
 
 [![Download on Chrome Web Store](https://img.shields.io/badge/Download%20on-Chrome%20Web%20Store-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/netmeter-web/jnjnledlnjnkfgepmadpfdljbmdhcihi)
 
-NetMeter is a lightweight and simple web extension designed to monitor your internet speed (upload and download) directly from your browser's toolbar. Keep track of your bandwidth usage in real-time, get detailed reports, and manage settings with ease.
+A collection of high-performance, privacy-focused browser utilities designed for power users. Monitor your bandwidth consumption and manage site data with surgical precision.
 
-## Features at a Glance
+---
 
-### Real-time Bandwidth Monitoring (Main Popup)
+## 📊 NetMeter Web
+**Real-time Bandwidth Monitoring Extension**
 
-Get an instant overview of your current upload and download speeds directly from the extension's popup. Simple, clean, and always accessible.
+Stay informed about exactly how much data websites are using. From high-definition video streams to background API calls, NetMeter Web breaks it all down in real-time.
 
-![Main Popup View](1-netmeter-bandwith.png)
+### Key Features:
+- **Granular Breakdown**: Categorizes data into Media, Images, Scripts, API Data, and more.
+- **Real-time Monitoring**: Floating on-page monitor and dynamic extension badge.
+- **Detailed Reports**: Analyze usage patterns by day, week, or month.
 
-### Intuitive Settings
+![NetMeter Web Preview](netmeter-web-screenshot.webp)
 
-Customize NetMeter to fit your needs. The settings tab in the popup allows you to adjust various parameters for a personalized monitoring experience.
+---
 
-![Settings Tab in Popup](2-netmeter-bandwith.png)
+## 🧹 NetMeter Cache & Data Cleaner
+**Surgical Site Data Management**
 
-### Comprehensive Usage Reports
+A powerful tool to analyze, monitor, and clean site-specific data. Take control of your browser storage without affecting your global sessions.
 
-Dive deeper into your internet usage with detailed reports. View bandwidth consumption for all sites or focus on the current site to understand your data flow.
+### Key Features:
+- **Site-Specific Focus**: Manage data only for the active tab.
+- **Advanced Inspector**: Drill down into Cookies, LocalStorage, and IndexedDB.
+- **Granular Cleanup**: Delete individual items without a full "all-or-nothing" wipe.
 
-![Reports Tab (All Sites & Current Site)](3-netmeter-bandwith.png)
+![NetMeter Cache & Data Cleaner Preview](netmeter-cache-cleaner-screenshot.webp)
 
-### Floating Icon & Real-time Badge
+---
 
-For continuous monitoring, NetMeter offers a floating icon that displays real-time bandwidth. Plus, a subtle badge on the extension icon keeps you informed at a glance.
+## 🛠 Built With
+- **TypeScript** & **Preact**: For high performance and tiny footprint.
+- **esbuild**: For lightning-fast builds.
+- **Privacy-First Architecture**: All processing happens locally on your device.
 
-![Floating Icon and Real-time Badge](4-netmeter-bandwith.png)
-
-## Get NetMeter Today!
-
-Enhance your browsing experience by keeping a close eye on your internet speed. Download the NetMeter Web Extension from the Chrome Web Store:
-
-[**Download NetMeter Web Extension**](https://chromewebstore.google.com/detail/netmeter-web/jnjnledlnjnkfgepmadpfdljbmdhcihi)
+## 🔗 Links
+- **Website**: [getnetmeter.com](https://getnetmeter.com)
+- **Developer**: [Mkhuda](https://github.com/mkhuda)
