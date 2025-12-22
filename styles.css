@@ -108,35 +108,35 @@ body {
 /* Extension Grid */
 .extension-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem; /* Reduced from 3rem */
-    margin-bottom: 4rem; /* Reduced from 6rem */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 0 auto 4rem auto;
+    max-width: 900px; /* Kept tight so 2 cards look centered and full */
 }
 
 .extension-card {
-    background: var(--card-bg);
+    background: white;
     border: 1px solid var(--border-color);
-    border-radius: 24px;
-    padding: 2rem 1.5rem; /* Reduced from 3rem 2rem */
+    border-radius: 32px; /* Smoother corners */
+    padding: 2.5rem 2rem;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
 }
 
 .extension-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     border-color: var(--primary-color);
-    background: white;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.1);
 }
 
-/* Logo Fix */
 .logo-wrapper {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 2rem;
+    width: 90px; /* Slightly bigger */
+    height: 90px;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,9 +149,33 @@ body {
     display: block;
 }
 
+/* Feature List inside Card */
+.card-features {
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+}
+
+.card-features li {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-features li::before {
+    content: "✓";
+    color: #2ecc71;
+    font-weight: bold;
+}
+
 .mainHost {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: var(--secondary-color);
 }
 

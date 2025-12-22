@@ -4,35 +4,16 @@
     <meta charset="UTF-8" />
     <title>FAQ - NetMeter Extensions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Frequently asked questions about NetMeter Extensions. Learn how we measure bandwidth accuracy and ensure user privacy." />
-    <meta name="keywords" content="NetMeter FAQ, bandwidth measurement, browser extension privacy, NetMeter support" />
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://getnetmeter.com/faq.html" />
-    <meta property="og:title" content="FAQ - NetMeter Extensions" />
-    <meta property="og:description" content="Frequently asked questions about NetMeter Extensions. Learn how we measure bandwidth accuracy and ensure user privacy." />
-    <meta property="og:image" content="https://getnetmeter.com/logo.png" />
-
-    <link rel="canonical" href="https://getnetmeter.com/faq.html" />
+    <meta name="description" content="Frequently asked questions about NetMeter Extensions. Learn about bandwidth measurement and surgical site data management." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
     <style>
-      .faq-item {
-        margin-bottom: 2.5rem;
-      }
-      .faq-question {
-        font-weight: 700;
-        color: var(--secondary-color);
-        font-size: 1.15rem;
-        margin-bottom: 0.75rem;
-        display: block;
-      }
-      .faq-answer {
-        color: var(--text-muted);
-        line-height: 1.7;
-      }
+      .faq-item { margin-bottom: 2.5rem; }
+      .faq-question { font-weight: 700; color: var(--secondary-color); font-size: 1.15rem; margin-bottom: 0.75rem; display: block; }
+      .faq-answer { color: var(--text-muted); line-height: 1.7; }
+      .faq-section-title { margin: 4rem 0 2rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary-color); display: inline-block; font-size: 1.5rem; font-weight: 800; color: var(--secondary-color); }
     </style>
   </head>
 
@@ -47,56 +28,80 @@
     <div class="container content-section">
       <article class="content-card">
         <h1>Frequently Asked Questions</h1>
-        <p class="last-updated">Our ongoing efforts to enhance extension accuracy and website support.</p>
+        
+        <!-- NetMeter Web Section -->
+        <h2 id="web" class="faq-section-title">NetMeter Web (Bandwidth Monitor)</h2>
 
         <div class="faq-item">
-          <span class="faq-question">How do you measure bandwidth usage?</span>
+          <span class="faq-question">How do you measure bandwidth usage for supported websites?</span>
           <p class="faq-answer">
-            We use several lightweight signals to estimate your data usage. Along with reading the Content-Length header, we apply carefully controlled patches to APIs like fetch, XHR, WebRTC, WebSocket, SSE, Beacon, native video/audio, and certain workers.
-            <br><br>
-            These patches run quietly inside the page context and never alter how the site behaves. By combining all these sources, we provide accurate inbound and outbound bandwidth estimates without affecting your browsing experience.
+            We use several lightweight signals to estimate your data usage. Along with reading the Content-Length header, we apply carefully controlled patches to APIs like fetch, XHR, WebRTC, WebSocket, SSE, Beacon, native video/audio, and certain workers. These patches run quietly inside the page context and never alter how the site behaves.
           </p>
         </div>
 
         <div class="faq-item">
-          <span class="faq-question">Do these patches affect website performance?</span>
+          <span class="faq-question">Do these patches affect performance?</span>
           <p class="faq-answer">
-            No. The instrumentation is minimal, non-intrusive, and designed to leave the website’s functionality completely unchanged. Everything continues to work as usual—you simply get clearer insight into your bandwidth usage.
+            No. The instrumentation is minimal, non-intrusive, and designed to leave the website’s functionality completely unchanged. The site works exactly as it normally does; we simply provide helpful metrics in the background.
           </p>
         </div>
 
         <div class="faq-item">
           <span class="faq-question">Why are some websites not supported?</span>
           <p class="faq-answer">
-            Supporting websites requires significant development effort to ensure our extension functions correctly on each site. Due to the dynamic nature of the internet and diverse web structures, it can be challenging to support every website immediately. We prioritize popular and frequently visited websites.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <span class="faq-question">How can I request support for a specific website?</span>
-          <p class="faq-answer">
-            We value user feedback! You can submit website requests through our contact email or by leaving a review on the Chrome Web Store. Your feedback helps us prioritize which sites to work on next.
+            Due to the dynamic nature of the internet, some complex site structures require significant development effort to ensure accuracy. We prioritize popular sites and are continually working to expand compatibility.
           </p>
         </div>
 
         <div class="faq-item">
           <span class="faq-question">Do you log my credentials or browsing history?</span>
           <p class="faq-answer">
-            <strong>No.</strong> Your privacy and security are our top priorities. We do not log your credentials, browsing history, or any sensitive information. All measurement logic runs locally on your device, and we do not collect or store your browsing sessions on our servers.
+            <strong>No.</strong> We do not log credentials or browsing history. While we measure request payloads for bandwidth estimation, we do not read, log, or store any of the data contained within those payloads.
+          </p>
+        </div>
+
+        <!-- Cache & Data Cleaner Section -->
+        <h2 id="cleaner" class="faq-section-title">Cache & Data Cleaner</h2>
+
+        <div class="faq-item">
+          <span class="faq-question">How is this different from Chrome's built-in "Clear Browsing Data"?</span>
+          <p class="faq-answer">
+            Chrome's tool is global and "all-or-nothing". Our cleaner is a <strong>surgical instrument</strong>: it lets you inspect and clean data for a <strong>single website</strong>. This means you can reset the state of one site without being logged out of everything else.
           </p>
         </div>
 
         <div class="faq-item">
-          <span class="faq-question">What should I do if I encounter issues?</span>
+          <span class="faq-question">Is my data being read or sent anywhere?</span>
           <p class="faq-answer">
-            If a website is not behaving as expected, try refreshing the page. If the issue persists, please report it to us at <strong>netmeter-ext@gmail.com</strong>. You can also temporarily disable the extension for specific sites via the popup toggle.
+            Never. The extension only reads <strong>metadata</strong> (like key names and sizes) for analysis. It never reads the actual <strong>content</strong> of your localStorage or databases. All operations happen locally on your browser.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <span class="faq-question">I deleted a site's IndexedDB and it started showing errors. Why?</span>
+          <p class="faq-answer">
+            This is expected as IndexedDB often holds essential app data. Deleting it is like a "hard reset". Simply <strong>reloading the page</strong> will allow the site to rebuild its database and return to normal.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <span class="faq-question">Will this extension slow down my browser?</span>
+          <p class="faq-answer">
+            No. We are obsessed with performance. The extension is tiny (~50KB) and uses smart throttling to ensure monitoring does not impact your browsing experience.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <span class="faq-question">Why does it require data access permissions?</span>
+          <p class="faq-answer">
+            To calculate the size of storage or clear the cache for a specific site, we need technical access to those browser APIs. We use these permissions responsibly and only for sites you choose to inspect.
           </p>
         </div>
 
       </article>
 
       <footer>
-        <p>&copy; 2025 getnetmeter.com. Built for Your needs?</p>
+        <p>&copy; 2025 getnetmeter.com. <a href="https://getnetmeter.com">Back to Home</a></p>
       </footer>
     </div>
   </body>

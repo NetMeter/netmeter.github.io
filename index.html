@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>NetMeter Extensions - Lightweight Browser Utilities</title>
+    <title>NetMeter Extensions - Web Data Monitor & Surgical Data Cleaner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="NetMeter Extensions: High-performance browser tools for real-time speed monitoring and surgical site data management. Privacy-focused and developer-friendly." />
-    <meta name="keywords" content="NetMeter, internet speed monitor, bandwidth meter, browser extension, cache manager, cookie cleaner, site data analyzer, Chrome extension, developer tools" />
+    <meta name="description" content="NetMeter Extensions: Powerful browser tools to uncover hidden bandwidth costs and surgically manage site-specific data. Lightweight, privacy-first, and built for power users." />
+    <meta name="keywords" content="NetMeter, bandwidth monitor, cache cleaner, cookie manager, site data analyzer, Chrome extension, developer tools, storage inspector" />
     <meta name="author" content="Mkhuda" />
     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="cVbixU9Sy-W3POIGYy0Z8myvwUAYKFbumN4ADL9K0tk" />
@@ -14,14 +14,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://getnetmeter.com" />
     <meta property="og:title" content="NetMeter Extensions - Better Browsing, Smarter Control" />
-    <meta property="og:description" content="Monitor internet speed and manage site data with precision. Lightweight, privacy-first extensions for power users." />
+    <meta property="og:description" content="Uncover hidden data costs and surgically manage site storage. Lightweight browser tools designed for precision." />
     <meta property="og:image" content="https://getnetmeter.com/logo.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://getnetmeter.com" />
     <meta property="twitter:title" content="NetMeter Extensions - Better Browsing, Smarter Control" />
-    <meta property="twitter:description" content="Monitor internet speed and manage site data with precision. Lightweight, privacy-first extensions for power users." />
+    <meta property="twitter:description" content="Stay informed about site bandwidth usage and manage browser storage with surgical precision." />
     <meta property="twitter:image" content="https://getnetmeter.com/logo.png" />
 
     <link rel="canonical" href="https://getnetmeter.com" />
@@ -32,6 +32,7 @@
   </head>
 
   <body>
+    <!-- Simple Centered Header -->
     <header class="site-header">
       <nav class="nav-container sub-nav-container">
         <a href="https://getnetmeter.com" class="nav-logo sub-nav-logo">NetMeter</a>
@@ -41,8 +42,8 @@
     <div class="container">
       <!-- Hero Section -->
       <section class="hub-header">
-        <h1 class="main-title">Better Browsing,<br>Smarter Control.</h1>
-        <p class="sub-title">High-performance browser extensions designed for power users who value speed, privacy, and precision.</p>
+        <h1 class="main-title">Uncover Hidden Costs.<br>Surgical Data Control.</h1>
+        <p class="sub-title">Stay informed about site bandwidth usage and manage browser storage with precision. High-performance tools for a faster, cleaner, and more transparent web.</p>
       </section>
 
       <!-- Extensions Grid -->
@@ -53,7 +54,13 @@
             <img src="./logo.png" alt="NetMeter Web Logo" />
           </div>
           <div class="mainHost">NetMeter Web</div>
-          <p class="extension-desc">Real-time bandwidth monitoring. Track your upload and download speeds directly from the toolbar.</p>
+          <p class="extension-desc">Detailed, real-time look into the bandwidth consumption of any site you visit, from video streams to background API calls.</p>
+          <ul class="card-features">
+            <li>Granular Breakdown (Media, API, etc.)</li>
+            <li>Real-Time Floating Monitoring</li>
+            <li>Comprehensive Usage Reports</li>
+            <li>Per-Site Tracking Control</li>
+          </ul>
           <a href="https://chrome.google.com/webstore/detail/netmeter-web/jnjnledlnjnkfgepmadpfdljbmdhcihi" class="bandwith" target="_blank">Get for Chrome</a>
           <div class="info-release">v2.1.0</div>
           <div class="footnote">
@@ -62,16 +69,23 @@
           </div>
         </div>
 
-        <!-- Card 2: Cache Manager -->
+        <!-- Card 2: Cache & Data Cleaner -->
         <div class="extension-card">
           <div class="logo-wrapper">
-            <img src="./cache-logo.png" alt="Cache & Data Manager Logo" />
+            <img src="./cache-logo.png" alt="NetMeter Cache & Data Cleaner Logo" />
           </div>
-          <div class="mainHost">Cache & Data Manager</div>
-          <p class="extension-desc">The surgical tool for site data. Analyze, monitor, and clean storage, cookies, and IndexedDB with ease.</p>
+          <div class="mainHost">Cache & Data Cleaner</div>
+          <p class="extension-desc">A precision toolkit to analyze and clean site-specific storage, cookies, and IndexedDB for the active tab only.</p>
+          <ul class="card-features">
+            <li>Precision Site-Specific Focus</li>
+            <li>Advanced Storage Inspector</li>
+            <li>Granular Item Deletion Engine</li>
+            <li>Sleek In-Page Modal Manager</li>
+          </ul>
           <a href="#" class="bandwith" style="opacity: 0.6; cursor: not-allowed;">Coming Soon</a>
           <div class="info-release">v1.0.0-rc</div>
           <div class="footnote">
+            <a href="faq.html#cleaner">FAQ</a>
             <a href="privacy.html">Privacy</a>
           </div>
         </div>
@@ -81,15 +95,15 @@
       <section class="features-section">
         <div class="feature-item">
           <h3>Privacy First</h3>
-          <p>We don't track your data. Our extensions are designed to work locally and respect your browsing privacy. No remote logging, no hidden tracking.</p>
+          <p>We never read your data content. Our tools only analyze metadata locally. Your credentials and browsing history stay on your device.</p>
         </div>
         <div class="feature-item">
-          <h3>Lightweight</h3>
-          <p>Built with modern tech like Preact and TypeScript to ensure zero impact on your browser's performance. Fast loading and low memory footprint.</p>
+          <h3>Performance Obsessed</h3>
+          <p>Extremely lightweight (~50KB) and built with Preact. Smart throttling ensures zero impact on your browser's performance.</p>
         </div>
         <div class="feature-item">
-          <h3>Developer Friendly</h3>
-          <p>Deep scan tools and granular controls designed specifically for developers. Inspect storage values that standard devtools often miss.</p>
+          <h3>Surgical Precision</h3>
+          <p>Forget global "all-or-nothing" tools. Manage and clean data for specific sites without affecting your other active sessions.</p>
         </div>
       </section>
 
@@ -97,8 +111,7 @@
       <section id="about" class="about-section">
         <div class="about-content">
           <h2>Behind the Project</h2>
-          <p>NetMeter is an independent project born out of a need for more precise and transparent browser tools. Unlike many bloated extensions, NetMeter focuses on doing one thing exceptionally well with a clean, modern interface.</p>
-          <p>Every line of code is crafted to be as efficient as possible, ensuring that your tools don't become the problem they're trying to solve.</p>
+          <p>NetMeter is an independent project by Mkhuda, born out of a need for more transparent and surgical browser tools. Every line of code is optimized for power users who value speed and privacy.</p>
           <a href="https://github.com/mkhuda" target="_blank" class="dev-tag">
             <span>Built by Mkhuda</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -106,6 +119,7 @@
         </div>
       </section>
 
+      <!-- Footer -->
       <footer>
         <p>&copy; 2025 getnetmeter.com. Built for Your needs?</p>
         <div class="footnote">
