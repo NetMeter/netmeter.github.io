@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to NetMeter - You're All Set!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
+    
+    <style>
+      .welcome-hero { text-align: center; padding: 4rem 0 2rem 0; position: relative; }
+      .success-icon { 
+        width: 80px; height: 80px; background: #2ecc71; color: white; 
+        border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+        margin: 0 auto 2rem auto; box-shadow: 0 0 30px rgba(46, 204, 113, 0.3);
+        animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      @keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }
+      
+      .setup-guide { 
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; 
+        margin: 4rem 0; text-align: center; 
+      }
+      .step-item { background: var(--card-bg); border: 1px solid var(--border-color); padding: 2rem; border-radius: 24px; }
+      .step-number { 
+        width: 32px; height: 32px; background: var(--primary-color); color: white; 
+        border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+        margin: 0 auto 1rem auto; font-weight: 800; font-size: 0.9rem;
+      }
+      
+      .cross-promo { 
+        background: #0f172a; color: white; padding: 3rem; 
+        border-radius: 32px; margin-top: 4rem; display: flex; align-items: center; gap: 3rem;
+        text-align: left; border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .promo-logos { display: flex; gap: 1rem; align-items: center; flex-shrink: 0; }
+      .promo-logos img { 
+        width: 80px; height: 80px; object-fit: contain;
+        filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.3));
+      }
+      .promo-content h3 { margin-top: 0; color: white; font-size: 1.5rem; }
+      .promo-content p { color: #94a3b8; margin-bottom: 1.5rem; line-height: 1.6; }
+      
+      @media (prefers-color-scheme: dark) {
+        .cross-promo { background: #020617; border-color: var(--border-color); }
+      }
+
+      @media (max-width: 768px) {
+        .setup-guide { grid-template-columns: 1fr; }
+        .cross-promo { flex-direction: column; text-align: center; padding: 2rem; gap: 2rem; }
+        .promo-logos { justify-content: center; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Sticky Header -->
+    <header class="site-header">
+      <nav class="nav-container">
+        <div class="nav-spacer"></div>
+        <a href="https://getnetmeter.com" class="nav-logo">NetMeter</a>
+        <div class="nav-help">
+          <a href="release-notes.html" class="nav-help-link" title="Changelog">
+            <span>Changelog</span>
+          </a>
+          <a href="faq.html" class="nav-help-link" title="Help & Support">
+            <span>Help</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="welcome-hero">
+        <div class="hero-decor">
+          <svg class="decor-icon icon-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <svg class="decor-icon icon-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg>
+        </div>
+        
+        <div class="success-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h1 class="main-title">Thank You for Choosing NetMeter!</h1>
+        <p class="sub-title">You've just upgraded your browsing experience. Here's how to get started in seconds.</p>
+      </section>
+
+      <div class="setup-guide reveal">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <h3>Pin It</h3>
+          <p>Click the <strong>puzzle icon</strong> in your toolbar and pin NetMeter for quick access.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <h3>Open</h3>
+          <p>Click the NetMeter icon to see your real-time data or manage storage.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <h3>Explore</h3>
+          <p>Go to any website and watch NetMeter reveal the hidden data costs.</p>
+        </div>
+      </div>
+
+      <section class="cross-promo reveal">
+        <div class="promo-logos">
+          <img src="logo.png" alt="NetMeter Web">
+          <img src="cache-logo.png" alt="Cache Cleaner">
+        </div>
+        <div class="promo-content">
+          <h3>Complete Your Toolkit</h3>
+          <p>Did you know NetMeter is a suite of precision tools? Make sure to check out our other extensions for total control over your bandwidth and browser data.</p>
+          <a href="https://getnetmeter.com#products" class="bandwith" style="background: white; color: #0f172a; width: auto; display: inline-block;">View All Extensions</a>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 getnetmeter.com. Built with precision for those who care about every byte. Tailored for Your needs.</p>
+        <div class="footnote">
+          <a href="https://github.com/mkhuda" target="_blank">Follow on GitHub</a>
+          <a href="https://chrome.google.com/webstore/detail/netmeter-web/jnjnledlnjnkfgepmadpfdljbmdhcihi" target="_blank">Rate on Web Store</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>
