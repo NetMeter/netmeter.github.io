@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>FAQ - NetMeter Extensions</title>
+    <title>Support & FAQ - NetMeter Extensions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Frequently asked questions about NetMeter Extensions. Learn about bandwidth measurement and surgical site data management." />
+    <meta name="description" content="NetMeter Extensions Support Center. Find answers to frequently asked questions, report bugs, or request new features." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -14,23 +14,70 @@
       .faq-question { font-weight: 700; color: var(--secondary-color); font-size: 1.15rem; margin-bottom: 0.75rem; display: block; }
       .faq-answer { color: var(--text-muted); line-height: 1.7; }
       .faq-section-title { margin: 4rem 0 2rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary-color); display: inline-block; font-size: 1.5rem; font-weight: 800; color: var(--secondary-color); }
+      
+      /* Support Section Styles */
+      .support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+      .support-card { background: var(--background-color); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 16px; transition: transform 0.2s; }
+      .support-card:hover { transform: translateY(-4px); border-color: var(--primary-color); }
+      .support-card h3 { margin-top: 0 !important; font-size: 1.1rem !important; margin-bottom: 0.5rem !important; }
+      .support-card p { font-size: 0.9rem; margin-bottom: 1rem; }
+      .support-link { color: var(--primary-color); text-decoration: none; font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+      
+      @media (max-width: 600px) { .support-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
 
   <body>
-    <!-- Simple Centered Header -->
+    <!-- Sticky Header -->
     <header class="site-header">
-      <nav class="nav-container sub-nav-container">
-        <a href="https://getnetmeter.com" class="nav-logo sub-nav-logo">NetMeter</a>
+      <nav class="nav-container">
+        <div class="nav-spacer"></div>
+        <a href="https://getnetmeter.com" class="nav-logo">NetMeter</a>
+        <div class="nav-help">
+          <a href="release-notes.html" class="nav-help-link" title="Changelog">
+            <span>Changelog</span>
+          </a>
+          <a href="faq.html" class="nav-help-link" title="Help & Support">
+            <span>Help</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </a>
+        </div>
       </nav>
     </header>
 
     <div class="container content-section">
       <article class="content-card">
-        <h1>Frequently Asked Questions</h1>
+        <h1>Support Center</h1>
+        <p class="last-updated">Everything you need to get the most out of NetMeter Extensions.</p>
         
+        <!-- Support & Feedback Hub -->
+        <h2 id="support" class="faq-section-title">Support & Feedback</h2>
+        <p class="faq-answer">Found a bug or have a suggestion? We're always looking to improve our tools based on your needs.</p>
+        
+        <div class="support-grid">
+          <!-- Bug Report Card -->
+          <div class="support-card">
+            <h3>Report an Issue</h3>
+            <p>Spotted a technical glitch or a broken feature? Track it publicly on GitHub.</p>
+            <a href="https://github.com/NetMeter/netmeter.github.io/issues" target="_blank" class="support-link">
+              Open GitHub Issue
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+          
+          <!-- Contact Card -->
+          <div class="support-card">
+            <h3>Direct Contact</h3>
+            <p>For general inquiries or private support requests, feel free to email us directly.</p>
+            <a href="mailto:netmeter.ext@gmail.com" class="support-link">
+              netmeter.ext@gmail.com
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
         <!-- NetMeter Web Section -->
-        <h2 id="web" class="faq-section-title">NetMeter Web (Bandwidth Monitor)</h2>
+        <h2 id="web" class="faq-section-title">FAQ: NetMeter Web</h2>
 
         <div class="faq-item">
           <span class="faq-question">How do you measure bandwidth usage for supported websites?</span>
@@ -61,7 +108,7 @@
         </div>
 
         <!-- Cache & Data Cleaner Section -->
-        <h2 id="cleaner" class="faq-section-title">Cache & Data Cleaner</h2>
+        <h2 id="cleaner" class="faq-section-title">FAQ: Cache & Data Cleaner</h2>
 
         <div class="faq-item">
           <span class="faq-question">How is this different from Chrome's built-in "Clear Browsing Data"?</span>
@@ -101,7 +148,7 @@
       </article>
 
       <footer>
-        <p>&copy; 2025 getnetmeter.com. <a href="https://getnetmeter.com">Back to Home</a></p>
+        <p>&copy; 2025 getnetmeter.com. Built with precision for those who care about every byte. Tailored for Your needs.</p>
       </footer>
     </div>
   </body>

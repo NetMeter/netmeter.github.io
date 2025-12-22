@@ -85,11 +85,17 @@ body::before {
 
 .nav-container {
     max-width: 1100px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.nav-spacer {
+    flex: 1;
+    display: flex;
 }
 
 .nav-logo {
@@ -100,8 +106,40 @@ body::before {
     letter-spacing: -0.02em;
 }
 
+.nav-help {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.nav-help-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    padding: 0.5rem 0.75rem;
+    border-radius: 99px;
+    margin-right: -0.75rem; /* Offset padding to align text with container edge */
+}
+
+.nav-help-link:hover {
+    color: var(--primary-color);
+    background: var(--border-color);
+}
+
+.nav-help-link svg {
+    width: 20px;
+    height: 20px;
+}
+
 .container {
     max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem 2rem;
 }
@@ -425,9 +463,9 @@ footer {
 
 /* Content Pages Styling */
 .content-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 0;
+    max-width: 800px; /* Keep it narrow for readability, but center it within 1100px */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: left;
 }
 
@@ -443,6 +481,7 @@ footer {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--secondary-color);
+    margin-top: 0;
     margin-bottom: 1rem;
 }
 
