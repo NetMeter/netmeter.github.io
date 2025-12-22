@@ -1,27 +1,80 @@
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --background-color: #f7f9fc;
-    --text-color: #333;
-    --white-color: #fff;
-    --light-gray-color: #ecf0f1;
-    --dark-gray-color: #7f8c8d;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #0f172a;
+    --background-color: #ffffff;
+    --card-bg: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --header-height: 70px;
 }
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--background-color);
-    color: var(--text-color);
+    background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    color: var(--text-main);
+    line-height: 1.5;
+    padding-top: var(--header-height);
+}
+
+/* Sticky Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    text-align: center;
+}
+
+.nav-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
 }
 
 .container {
@@ -72,104 +125,227 @@ body {
     align-items: center;
 }
 
-img {
-    width: 100px;
-    margin-bottom: 1.5rem;
+.extension-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+/* Logo Fix */
+.logo-wrapper {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .mainHost {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--secondary-color);
-    margin-bottom: 0.5rem;
+}
+
+.extension-desc {
+    color: var(--text-muted);
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    min-height: 4.5rem;
 }
 
 .bandwith {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: none;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 500;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 1.5rem;
-    display: inline-block;
+    font-weight: 600;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 240px;
 }
 
-.bandwith:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
+.extension-card:hover .bandwith {
+    background-color: var(--primary-color);
 }
 
 .info-release {
     margin-top: 1.5rem;
-    color: var(--dark-gray-color);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+/* Why Section */
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    border-top: 1px solid var(--border-color);
+    padding: 5rem 0;
+}
+
+.feature-item h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+.feature-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about-section {
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 32px;
+    padding: 4rem;
+    margin-top: 4rem;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.dev-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.dev-tag:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+    margin-top: 6rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    color: var(--text-muted);
     font-size: 0.9rem;
 }
 
 .footnote {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--light-gray-color);
-    width: 100%;
-    font-size: 0.9rem;
+    margin-top: 1.5rem;
 }
 
 .footnote a {
-    color: var(--dark-gray-color);
+    color: var(--text-main);
     text-decoration: none;
-    margin: 0 0.5rem;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    margin: 0 0.75rem;
 }
 
 .footnote a:hover {
     color: var(--primary-color);
 }
 
-/* Privacy, FAQ, Release Notes Pages */
-.privacy-container, .release-notes-container, .faq-container {
-    padding: 2rem;
+/* Content Pages Styling */
+.content-section {
     max-width: 800px;
-    margin: 2rem auto;
-    background-color: var(--white-color);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 2rem 0;
     text-align: left;
 }
 
-.privacy-content, .release-notes-content, .faq-content {
-    color: var(--text-color);
-    line-height: 1.6;
-    padding-top: 1rem;
+.content-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
 }
 
-h1, h2, h3 {
+.content-card h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.content-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     color: var(--secondary-color);
 }
 
-/* Responsive Design */
+.content-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
+
+.content-card p, .content-card li {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.content-card ul {
+    padding-left: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.last-updated {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+/* Subpage Header */
+.sub-nav-container {
+    justify-content: center !important;
+}
+
+.sub-nav-logo {
+    font-size: 1.5rem !important;
+    letter-spacing: -0.02em;
+}
+
 @media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-
-    .urlContent {
-        padding: 2rem 1.5rem;
-    }
-
-    .mainHost {
-        font-size: 1.5rem;
-    }
-
-    .bandwith {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .privacy-container, .release-notes-container, .faq-container {
-        padding: 1.5rem;
-        margin: 1rem;
-    }
+    .content-card { padding: 2rem 1.5rem; }
 }
