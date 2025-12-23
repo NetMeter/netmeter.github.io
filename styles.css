@@ -93,9 +93,19 @@ body::before {
     align-items: center;
 }
 
-.nav-spacer {
+.nav-side {
     flex: 1;
     display: flex;
+    align-items: center;
+}
+
+.nav-side.left {
+    justify-content: flex-start;
+}
+
+.nav-side.right {
+    justify-content: flex-end;
+    gap: 0.5rem;
 }
 
 .nav-logo {
@@ -104,16 +114,10 @@ body::before {
     color: var(--secondary-color);
     text-decoration: none;
     letter-spacing: -0.02em;
+    flex-shrink: 0;
 }
 
-.nav-help {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.5rem;
-}
-
-.nav-help-link {
+.nav-item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -124,18 +128,21 @@ body::before {
     transition: all 0.2s;
     padding: 0.5rem 0.75rem;
     border-radius: 99px;
-    margin-right: -0.75rem; /* Offset padding to align text with container edge */
 }
 
-.nav-help-link:hover {
+.nav-item:hover {
     color: var(--primary-color);
     background: var(--border-color);
 }
 
-.nav-help-link svg {
+.nav-item svg {
     width: 20px;
     height: 20px;
 }
+
+/* Perfect alignment for leftmost and rightmost items */
+.nav-side.left .nav-item { margin-left: -0.75rem; }
+.nav-side.right .nav-item:last-child { margin-right: -0.75rem; }
 
 .container {
     max-width: 1100px;
@@ -209,8 +216,8 @@ body::before {
 /* Extension Grid */
 .extension-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Reduced from 350px */
+    gap: 1.5rem;
     margin: 0 auto 4rem auto;
     max-width: 900px;
 }
@@ -226,6 +233,37 @@ body::before {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    width: 100%; /* Ensure it takes full width of grid cell */
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 1.25rem; /* Tighter padding on mobile */
+    }
+    
+    .nav-item span {
+        display: none; /* Hide text on mobile */
+    }
+
+    .nav-item {
+        padding: 0.5rem; /* Rampingkan padding */
+    }
+
+    .nav-logo {
+        font-size: 1.25rem; /* Sedikit perkecil logo */
+    }
+    
+    .extension-grid {
+        grid-template-columns: 1fr; /* Force single column */
+    }
+
+    .extension-card {
+        padding: 2rem 1.25rem; /* Tighter internal padding */
+    }
+
+    .main-title {
+        font-size: 2.25rem;
+    }
 }
 
 .extension-card:hover {
@@ -400,7 +438,7 @@ body::before {
 }
 
 .about-content {
-    max-width: 700px;
+    max-width: 850px; /* Increased from 700px for better balance */
     position: relative;
     z-index: 2;
 }
