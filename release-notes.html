@@ -9,7 +9,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://getnetmeter.com/release-notes.html" />
     <meta property="og:title" content="Release Notes - NetMeter Extensions" />
-    <meta property="og:description" content="Stay updated with the latest features, improvements, and bug fixes for NetMeter Extensions." />
+    <meta property="og:description" content="Official release history for NetMeter Web and Cache & Data Cleaner extensions." />
     <meta property="og:image" content="https://getnetmeter.com/logo.png" />
 
     <link rel="canonical" href="https://getnetmeter.com/release-notes.html" />
@@ -25,6 +25,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
+    <style>
+      .changelog-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+      }
+      .changelog-column {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        padding: 2.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+      .changelog-column h2 { 
+        margin-top: 0; 
+        font-size: 1.75rem;
+        color: var(--secondary-color);
+        border-bottom: 2px solid var(--primary-color); 
+        display: inline-block; 
+        padding-bottom: 0.25rem; 
+        margin-bottom: 2rem; 
+      }
+      .version-item { margin-bottom: 3rem; }
+      .version-item h3 { 
+        margin-top: 0; 
+        display: flex; 
+        align-items: center; 
+        gap: 0.75rem; 
+        color: var(--secondary-color);
+        font-size: 1.25rem;
+      }
+      .version-tag { 
+        background: var(--primary-color); 
+        color: white; 
+        padding: 0.2rem 0.6rem; 
+        border-radius: 6px; 
+        font-size: 0.7rem; 
+        font-weight: 800; 
+        text-transform: uppercase;
+      }
+      .version-date { color: var(--text-muted); font-size: 0.85rem; display: block; margin-bottom: 0.75rem; }
+      .version-item ul { padding-left: 1.2rem; }
+      .version-item li { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.5; }
+
+      @media (max-width: 900px) {
+        .changelog-grid { grid-template-columns: 1fr; }
+      }
+    </style>
   </head>
 
   <body>
@@ -51,64 +100,136 @@
       </nav>
     </header>
 
-    <div class="container content-section">
-      <article class="content-card">
-        <h1>Release Notes</h1>
-        <span class="last-updated">Last updated: <strong>December 22, 2025</strong></span>
+    <div class="container" style="max-width: 1100px;">
+      <header style="margin-bottom: 3rem;">
+        <h1 class="main-title" style="text-align: left; font-size: 2.5rem; margin-top: 0;">Release Notes</h1>
+        <p class="sub-title" style="text-align: left; margin: 0;">All updates and improvements for NetMeter Extensions.</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Last updated: <strong>December 27, 2025</strong></p>
+      </header>
 
-        <section>
-          <h2>NetMeter Web</h2>
-          <p>The original real-time bandwidth monitor.</p>
+      <div class="changelog-grid">
+        <!-- NetMeter Web Column -->
+        <section class="changelog-column reveal">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+            <h2 style="margin-bottom: 0;">NetMeter Web</h2>
+            <a href="https://chrome.google.com/webstore/detail/netmeter-web/jnjnledlnjnkfgepmadpfdljbmdhcihi" target="_blank" class="bandwith" style="padding: 0.5rem 1rem; font-size: 0.8rem; max-width: none; width: auto; border-radius: 12px;">Get for Chrome</a>
+          </div>
+          
+          <div class="version-item">
+            <h3>v2.2.0 <span class="version-tag">LATEST</span></h3>
+            <span class="version-date">December 25, 2025</span>
+            <ul>
+              <li>Reduced bundle file size for better performance.</li>
+              <li>Fixed Native Video HTML5 patch issues for improved accuracy.</li>
+            </ul>
+          </div>
 
-          <h3>v2.1.0</h3>
-          <ul>
-            <li>Optimized CPU and memory consumption.</li>
-            <li>Reduced bundle file size for faster loading.</li>
-            <li>Improved content type detection logic.</li>
-            <li>Enhanced Dedicated Worker patching for better accuracy.</li>
-          </ul>
+          <div class="version-item">
+            <h3>v2.1.0</h3>
+            <span class="version-date">December 08, 2025</span>
+            <ul>
+              <li>Optimized CPU and memory consumption.</li>
+              <li>Reduced bundle file size.</li>
+              <li>Improved content type detection logic.</li>
+              <li>Enhanced Dedicated Worker patching.</li>
+            </ul>
+          </div>
 
-          <h3>v2.0.0</h3>
-          <p>Major architectural overhaul and feature additions.</p>
-          <ul>
-            <li>Categorized bandwidth consumption by site.</li>
-            <li>Granular data breakdown in the reports tab.</li>
-            <li>Enhanced real-time bandwidth detection engine.</li>
-            <li>Correct attribution for traffic within embedded iframes.</li>
-          </ul>
+          <div class="version-item">
+            <h3>v2.0.0</h3>
+            <ul>
+              <li>Categorized bandwidth consumption by site.</li>
+              <li>Granular data breakdown in reports.</li>
+              <li>Enhanced real-time detection engine.</li>
+              <li>Traffic within embedded iframes monitoring.</li>
+            </ul>
+          </div>
 
-          <h3>v1.1.1</h3>
-          <ul>
-            <li>Switched to main-world patcher (netmeter-patcher) for better reliability.</li>
-            <li>Redesigned tracking toggle: Click the NetMeter logo to enable/disable.</li>
-            <li>Added search functionality to the Reports Tab.</li>
-          </ul>
+          <div class="version-item">
+            <h3>v1.1.1</h3>
+            <ul>
+              <li>Switched to main-world patcher.</li>
+              <li>Redesigned tracking toggle via logo.</li>
+              <li>Added search functionality to Reports Tab.</li>
+            </ul>
+          </div>
 
-          <h3>v1.0.5</h3>
-          <ul>
-            <li>Added automatic data cleanup (auto-clear data older than 30 days).</li>
-            <li>Improved Reports UI with better charts and layouts.</li>
-          </ul>
+          <div class="version-item">
+            <h3>v1.0.5</h3>
+            <ul>
+              <li>Added Search in Reports.</li>
+              <li>Automatic data cleanup (older than 30 days).</li>
+              <li>Improved Reports UI.</li>
+            </ul>
+          </div>
 
-          <h3>v1.0.0</h3>
-          <p>Initial major stable release.</p>
-          <ul>
-            <li>Complete UI/UX overhaul.</li>
-            <li>Historical Usage & Detailed Reports.</li>
-            <li>Floating Bandwidth Monitor & Icon Badge.</li>
-            <li>Dark Mode Support.</li>
-          </ul>
+          <div class="version-item">
+            <h3>v1.0.0</h3>
+            <ul>
+              <li>Complete UI/UX overhaul.</li>
+              <li>Historical Usage & Detailed Reports.</li>
+              <li>Floating Monitor & Icon Badge.</li>
+              <li>Dark Mode Support.</li>
+            </ul>
+          </div>
+
+          <div class="version-item">
+            <h3>v0.0.1.x</h3>
+            <ul>
+              <li>Improved streaming site detection (Kick.com, Youtube Music, etc.).</li>
+              <li>Support for TikTok.</li>
+              <li>Reduced bundle file size.</li>
+              <li>Added ability to remove logs on current site.</li>
+            </ul>
+          </div>
+
+          <div class="version-item">
+            <h3>v0.0.0.x</h3>
+            <ul>
+              <li>Initial beta release.</li>
+              <li>Support for Youtube, Twitch, and standard web traffic.</li>
+              <li>Basic bandwidth monitoring engine.</li>
+            </ul>
+          </div>
         </section>
 
-        <section style="margin-top: 4rem; opacity: 0.7;">
-          <h2>Cache & Data Manager</h2>
-          <p>Upcoming release. Stay tuned for v1.0.0-rc.</p>
+        <!-- Cache & Data Cleaner Column -->
+        <section class="changelog-column reveal">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+            <h2 style="margin-bottom: 0;">Cache & Cleaner</h2>
+            <a href="https://chromewebstore.google.com/detail/netmeter-cache-data-clean/kpjcomfoceiapenmgmcojoodackgflol" target="_blank" class="bandwith" style="padding: 0.5rem 1rem; font-size: 0.8rem; max-width: none; width: auto; border-radius: 12px; background-color: #f59e0b; color: white;">Get for Chrome</a>
+          </div>
+          
+          <div class="version-item">
+            <h3>v1.0.0 <span class="version-tag">INITIAL</span></h3>
+            <span class="version-date">December 27, 2025</span>
+            <ul>
+              <li>Initial stable release.</li>
+              <li>Precision Site-Specific Focus (active tab only).</li>
+              <li>Support for Cookies, LocalStorage, SessionStorage, and IndexedDB.</li>
+              <li>Advanced Storage Inspector with granular deletion.</li>
+              <li>Sleek In-Page modal management via context menu.</li>
+              <li>Hybrid Deletion Engine for thorough cleanup.</li>
+            </ul>
+          </div>
         </section>
-      </article>
+      </div>
 
       <footer>
         <p>&copy; 2025 getnetmeter.com. Built with precision for those who care about every byte. Tailored for Your needs.</p>
       </footer>
     </div>
+
+    <script>
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>
