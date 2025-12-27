@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Exclude the welcome page from search results
+Disallow: /welcome.html
+
+Sitemap: https://getnetmeter.com/sitemap.xml
